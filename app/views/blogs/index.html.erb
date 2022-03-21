@@ -1,0 +1,17 @@
+<h1>Blogs</h1>
+
+  <tbody>
+    <% @blogs.each_with_index do |blog, index| %>
+	  	<div>
+			<h2>
+				<span><%= index+1 %>.</span>
+				<%= link_to(blog) do%>
+					<%= blog.title %>
+				<% end %>
+			</h2>
+		</div>
+	  	<hr>
+    <% end %>
+<br>
+
+<%= link_to 'New Blog', new_blog_path %>
